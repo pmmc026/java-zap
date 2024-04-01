@@ -22,7 +22,7 @@ public class LeitorArquivo {
     public StringBuilder lerArquivo() {
         StringBuilder textoDoArquivo = new StringBuilder();
         try {
-            FileInputStream entradaDeDados = new FileInputStream(new File(diretorioArquivo));
+            FileInputStream entradaDeDados = new FileInputStream(diretorioArquivo);
             int leitura = entradaDeDados.read();
             while(leitura != -1) {
                 textoDoArquivo.append((char) leitura);
