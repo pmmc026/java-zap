@@ -16,73 +16,23 @@ public class Mensagem {
 
     private int indice;
 
-    public Mensagem (int indice, int dia, int hora, String mes, int mesNumerico, String nome, String dataCompleta ){
+    public Mensagem (int indice, int dia, int hora, String mes, String nome, String dataCompleta) {
         this.indice = indice;
         this.dia = dia;
         this.hora = hora;
         this.mes = mes;
-        this.mesNumerico = mesNumerico;
+        this.mesNumerico = converteMes(this.mes);
         this.nome = nome;
         this.dataCompleta = dataCompleta;
+    }
 
-    }
-    public void converteMes(){
-        if(mes.equals("January")){
-            int mesNumerico = 1;
-        }
-        if(mes.equals("February")) {
-            int mesNumerico = 2;
-        }
-        if(mes.equals("March")) {
-            int mesNumerico = 3;
-        }
-        if(mes.equals("April")) {
-            int mesNumerico = 4;
-        }
-        if(mes.equals("May")) {
-            int mesNumerico = 5;
-        }
-        if(mes.equals("June")) {
-            int mesNumerico = 6;
-        }
-        if(mes.equals("July")) {
-            int mesNumerico = 7;
-        }
-        if(mes.equals("August")) {
-            int mesNumerico = 8;
-        }
-        if(mes.equals("September")) {
-            int mesNumerico = 9;
-        }
-        if(mes.equals("October")) {
-            int mesNumerico = 10;
-        }
-        if(mes.equals("November")) {
-            int mesNumerico = 11;
-        }
-        if(mes.equals("December")) {
-            int mesNumerico = 12;
-        }
-    }
-    public void exibirMensagem(){
-        System.out.print("Dia: " + getDia() + "\n");
-        System.out.print("Hora: " + getHora() + "\n");
-        System.out.print("Mes: " + getMes() + "\n");
-        System.out.print("Nome " + getNome() + "\n");
-        System.out.print("Data " + getDataCompleta() + "\n");
-    }
     public int getHora() {
         return hora;
-    }
-
-    public Mensagem(int dia) {
-        this.dia = dia;
     }
 
     public void setHora(int hora) {
         this.hora = hora;
     }
-
 
     public int getDia() {
         return dia;
@@ -107,6 +57,15 @@ public class Mensagem {
     public void setNome(String nome) {
         this.nome = nome;
     }
+
+    public int getMesNumerico() {
+        return mesNumerico;
+    }
+
+    public void setMesNumerico(int mesNumerico) {
+        this.mesNumerico = mesNumerico;
+    }
+
     public String getDataCompleta() {
         return dataCompleta;
     }
@@ -114,4 +73,54 @@ public class Mensagem {
     public void setDataCompleta(String dataCompleta) {
         this.dataCompleta = dataCompleta;
     }
+
+    public int converteMes(String mes){
+        int mesNumerico = 0;
+        if(mes.equals("January")){
+            mesNumerico = 1;
+        }
+        if(mes.equals("February")) {
+            mesNumerico = 2;
+        }
+        if(mes.equals("March")) {
+            mesNumerico = 3;
+        }
+        if(mes.equals("April")) {
+            mesNumerico = 4;
+        }
+        if(mes.equals("May")) {
+            mesNumerico = 5;
+        }
+        if(mes.equals("June")) {
+            mesNumerico = 6;
+        }
+        if(mes.equals("July")) {
+            mesNumerico = 7;
+        }
+        if(mes.equals("August")) {
+            mesNumerico = 8;
+        }
+        if(mes.equals("September")) {
+            mesNumerico = 9;
+        }
+        if(mes.equals("October")) {
+            mesNumerico = 10;
+        }
+        if(mes.equals("November")) {
+            mesNumerico = 11;
+        }
+        if(mes.equals("December")) {
+            mesNumerico = 12;
+        }
+        return mesNumerico;
+    }
+    public void exibirInfo(){
+        System.out.print("Dia: " + getDia() + "\n");
+        System.out.print("Hora: " + getHora() + "\n");
+        System.out.print("Mês: " + getMes() + " - " + getMesNumerico() + "\n");
+        System.out.print("Nome: " + getNome() + "\n");
+        System.out.print("Data: " + getDataCompleta() + "\n");
+        System.out.println();
+    }
+
 }
