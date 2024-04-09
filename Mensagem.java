@@ -1,3 +1,10 @@
+/**
+ *
+ * Classe para trasnformar as informções da base de dados em objetos
+ *
+ *
+ */
+
 public class Mensagem {
     private int dia;
     private int hora;
@@ -5,15 +12,6 @@ public class Mensagem {
     private int mesNumerico;
     private String nome;
     private String dataCompleta;
-
-    public int getIndice() {
-        return indice;
-    }
-
-    public void setIndice(int indice) {
-        this.indice = indice;
-    }
-
     private int indice;
 
     public Mensagem (int indice, int dia, int hora, String mes, String nome, String dataCompleta) {
@@ -74,6 +72,21 @@ public class Mensagem {
         this.dataCompleta = dataCompleta;
     }
 
+    public int getIndice() {
+        return indice;
+    }
+
+    public void setIndice(int indice) {
+        this.indice = indice;
+    }
+
+
+    /**
+     *
+     * Classe que coverte o valor String de cada mês para o valor númerico correspondente (Exemplo: Maio = 5)
+     * @param mes O valor em String do mês
+     * @return retorna o valor numérico
+     */
     public int converteMes(String mes){
         int mesNumerico = 0;
         if(mes.equals("January")){
@@ -114,6 +127,13 @@ public class Mensagem {
         }
         return mesNumerico;
     }
+
+    /**
+     *
+     *
+     * Exibe as informções da base de dados na tela, após serem tratadas pela classe LeitorArquivo
+     *
+     */
     public void exibirInfo(){
         System.out.print("Dia: " + getDia() + "\n");
         System.out.print("Hora: " + getHora() + "\n");
