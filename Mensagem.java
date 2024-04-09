@@ -1,6 +1,6 @@
 /**
  *
- * Classe para trasnformar as informções da base de dados em objetos
+ * Classe para transformar as informações da base de dados em objetos.
  *
  *
  */
@@ -83,9 +83,9 @@ public class Mensagem {
 
     /**
      *
-     * Classe que coverte o valor String de cada mês para o valor númerico correspondente (Exemplo: Maio = 5)
-     * @param mes O valor em String do mês
-     * @return retorna o valor numérico
+     * Classe que coverte o valor String de cada mês para o valor númerico correspondente (Exemplo: Maio = 5).
+     * @param mes O valor em String do mês.
+     * @return retorna o valor numérico.
      */
     public int converteMes(String mes){
         int mesNumerico = 0;
@@ -131,7 +131,7 @@ public class Mensagem {
     /**
      *
      *
-     * Exibe as informções da base de dados na tela, após serem tratadas pela classe LeitorArquivo
+     * Exibe as informções da base de dados na tela, após serem tratadas pela classe LeitorArquivo.
      *
      */
     public void exibirInfo(){
