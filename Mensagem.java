@@ -83,7 +83,7 @@ public class Mensagem {
 
     /**
      *
-     * Classe que coverte o valor String de cada mês para o valor númerico correspondente (Exemplo: Maio = 5).
+     * Classe que converte o valor String de cada mês para o valor númerico correspondente (Exemplo: Maio = 5).
      * @param mes O valor em String do mês.
      * @return retorna o valor numérico.
      */
@@ -131,7 +131,7 @@ public class Mensagem {
     /**
      *
      *
-     * Exibe as informções da base de dados na tela, após serem tratadas pela classe LeitorArquivo.
+     * Exibe as informações da base de dados na tela, após serem tratadas pela classe LeitorArquivo.
      *
      */
     public void exibirInfo(){
