@@ -9,9 +9,9 @@ public class LeitorArquivo {
     private Ferramentas ferramentas;
     BufferedReader entradaDeDados;
     /**
+     * Método para ler o arquivo da base de dados.
+     * @param diretorioArquivo String contendo o arquivo a ser lido.
      * 
-     * @param diretorioArquivo 
-     * @throws FileNotFoundException
      */
     public LeitorArquivo(String diretorioArquivo) throws FileNotFoundException {
 
