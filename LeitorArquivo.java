@@ -1,11 +1,18 @@
 import java.io.*;
-
+/**
+ * Classe que trata as informações da base de dados.
+ * 
+ */
 public class LeitorArquivo {
 
     private String diretorioArquivo;
     private Ferramentas ferramentas;
     BufferedReader entradaDeDados;
-
+    /**
+     * 
+     * @param diretorioArquivo 
+     * @throws FileNotFoundException
+     */
     public LeitorArquivo(String diretorioArquivo) throws FileNotFoundException {
 
         this.diretorioArquivo = diretorioArquivo;
@@ -21,7 +28,10 @@ public class LeitorArquivo {
     public void setDiretorioArquivo(String diretorioArquivo) {
         this.diretorioArquivo = diretorioArquivo;
     }
-
+    /**
+     * Método que fatia as informações da base de dados através da vírgula e as coloca num vetor de tamanho 6.
+     * @return retorna o vetor.
+     */
     public String[] fatiarLinha() {
         String[] linhaFatiada = new String[6];
         try {
@@ -36,7 +46,10 @@ public class LeitorArquivo {
         }
         return linhaFatiada;
     }
-
+    /**
+     * Chama o método fatiarlinha() para obter as informações fatiadas.
+     * @return Se não há mais informações para ler o método retorna null. Se houver, ele cria uma instância da classe Mensagem.
+     */
     public Mensagem proximaMensagem() {
         String[] linhaFatiada = fatiarLinha();
         if (linhaFatiada == null) {
