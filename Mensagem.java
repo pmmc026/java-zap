@@ -1,6 +1,6 @@
 /**
  *
- * Classe para transformar as informações da base de dados em objetos.
+ * Classe responsável por gerar objetos que representem uma mensagem.
  *
  *
  */
@@ -14,6 +14,10 @@ public class Mensagem {
     private String dataCompleta;
     private int indice;
 
+    /**
+     *
+     * Construtor da classe Mensagem.
+     * */
     public Mensagem (int indice, int dia, int hora, String mes, String nome, String dataCompleta) {
         this.indice = indice;
         this.dia = dia;
@@ -131,7 +135,7 @@ public class Mensagem {
     /**
      *
      *
-     * Exibe as informações da base de dados na tela, após serem tratadas pela classe LeitorArquivo.
+     * Exibe as informações completas do objeto.
      *
      */
     public void exibirInfo(){
